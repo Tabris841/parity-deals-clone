@@ -1,6 +1,6 @@
 import { SQL } from 'drizzle-orm';
 
-import { subscriptionTiers } from '@/data/subscriptionTiers';
+import { subscriptionTiers } from '@/data/subscription-tiers';
 import { db } from '@/drizzle/db';
 import { UserSubscriptionTable } from '@/drizzle/schema';
 import {

@@ -4,7 +4,10 @@ import { headers } from 'next/headers';
 import { Webhook } from 'svix';
 
 import { env } from '@/data/env/server';
-import { createUserSubscription } from '@/server/db/subscription';
+import {
+  createUserSubscription,
+  getUserSubscription,
+} from '@/server/db/subscription';
 import { deleteUser } from '@/server/db/users';
 
 // const stripe = new Stripe(env.STRIPE_SECRET_KEY);
@@ -50,12 +53,12 @@ export async function POST(req: Request) {
     }
     case 'user.deleted': {
       if (event.data.id != null) {
-        // const userSubscription = await getUserSubscription(event.data.id);
-        // if (userSubscription?.stripeSubscriptionId != null) {
-        //   await stripe.subscriptions.cancel(
-        //     userSubscription?.stripeSubscriptionId,
-        //   );
-        // }
+        const userSubscription = await getUserSubscription(event.data.id);
+        if (userSubscription?.stripeSubscriptionId != null) {
+          // await stripe.subscriptions.cancel(
+          //   userSubscription?.stripeSubscriptionId,
+          // );
+        }
         await deleteUser(event.data.id);
       }
     }

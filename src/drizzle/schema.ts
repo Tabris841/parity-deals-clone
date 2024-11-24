@@ -11,7 +11,7 @@ import {
   uuid,
 } from 'drizzle-orm/pg-core';
 
-import { TierNames, subscriptionTiers } from '@/data/subscriptionTiers';
+import { TierNames, subscriptionTiers } from '@/data/subscription-tiers';
 
 const createdAt = timestamp('created_at', { withTimezone: true })
   .notNull()
