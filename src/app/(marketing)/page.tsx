@@ -8,7 +8,7 @@ import { ClerkIcon } from '@/app/(marketing)/_icons/clerk';
 import { NeonIcon } from '@/app/(marketing)/_icons/neon';
 import { BrandLogo } from '@/components/brand-logo';
 import { Button } from '@/components/ui/button';
-import { subscriptionTiersInOrder } from '@/data/subscriptionTiers';
+import { subscriptionTiersInOrder } from '@/data/subscription-tiers';
 
 export default function HomePage() {
   return (
