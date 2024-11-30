@@ -1,5 +1,5 @@
-const compactNumberFormatter = new Intl.NumberFormat(undefined, {
-  notation: "compact",
+const compactNumberFormatter = new Intl.NumberFormat('en-IN', {
+  notation: 'compact',
 });
 
 export function formatCompactNumber(number: number) {

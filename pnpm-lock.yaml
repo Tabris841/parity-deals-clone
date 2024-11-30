@@ -13,8 +13,8 @@ importers:
   .:
     dependencies:
       '@clerk/nextjs':
-        specifier: ^6.5.0
-        version: 6.5.0(next@15.0.3(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106))(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)
+        specifier: ^6.5.1
+        version: 6.5.1(next@15.0.3(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106))(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)
       '@date-fns/tz':
         specifier: ^1.2.0
         version: 1.2.0
@@ -39,6 +39,9 @@ importers:
       '@radix-ui/react-label':
         specifier: ^2.1.0
         version: 2.1.0(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)(types-react-dom@19.0.0-rc.1)(types-react@19.0.0-rc.1)
+      '@radix-ui/react-progress':
+        specifier: ^1.1.0
+        version: 1.1.0(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)(types-react-dom@19.0.0-rc.1)(types-react@19.0.0-rc.1)
       '@radix-ui/react-slot':
         specifier: ^1.1.0
         version: 1.1.0(react@19.0.0-rc-66855b96-20241106)(types-react@19.0.0-rc.1)
@@ -84,9 +87,12 @@ importers:
       react-hook-form:
         specifier: ^7.53.2
         version: 7.53.2(react@19.0.0-rc-66855b96-20241106)
+      stripe:
+        specifier: ^17.4.0
+        version: 17.4.0
       svix:
-        specifier: ^1.41.0
-        version: 1.41.0
+        specifier: ^1.42.0
+        version: 1.42.0
       tailwind-merge:
         specifier: ^2.5.5
         version: 2.5.5
@@ -204,15 +210,15 @@ packages:
     resolution: {integrity: sha512-FIGBtr8qIgS+NbovKcLOIg8BsQj1JaykW3VKft3H83tONQD5Rg9ENXj/JX1HyZGC3ixLv5BUxu4bihQ78L/gJQ==}
     engines: {node: '>=18.17.0'}
 
-  '@clerk/clerk-react@5.17.0':
-    resolution: {integrity: sha512-++PSiayBaK877XTjbTZzyqommVlxnFNevxCKsOXbq8+KENAyYkUZ6LJpyoWjfjg1fnKq6oUFax+TwnyOyyxoqw==}
+  '@clerk/clerk-react@5.17.1':
+    resolution: {integrity: sha512-j8WfJcd0NrD2hvtc3EF5IcWos3ajbKz2Bmv5do3VKYoj2JG1M6UbT2jDJ0Qv2gV8Cks51VNp+YuP89gX5ZNnrQ==}
     engines: {node: '>=18.17.0'}
     peerDependencies:
       react: ^18 || ^19.0.0-0
       react-dom: ^18 || ^19.0.0-0
 
-  '@clerk/nextjs@6.5.0':
-    resolution: {integrity: sha512-0+MhX4Hz/fdvVYeZIC7XNI8qZ7vX+UtfMksE6qdyWR5IGewCsNiIHlDW0fDtau6p1e6TsQ66qTnZz15yU4G7dw==}
+  '@clerk/nextjs@6.5.1':
+    resolution: {integrity: sha512-/FS1wRMOZvEF7azI+DX/DoQ3Q49oqjC3R4GgJzKnd1TIXZxhnPQbM1OvOnwBa7OEieieaXm+aPko+EYPYnSy9A==}
     engines: {node: '>=18.17.0'}
     peerDependencies:
       next: ^13.5.4 || ^14.0.3 || ^15.0.0
@@ -1141,6 +1147,19 @@ packages:
 
   '@radix-ui/react-primitive@2.0.0':
     resolution: {integrity: sha512-ZSpFm0/uHa8zTvKBDjLFWLo8dkr4MBsiDLz0g3gMUwqgLHz9rTaRRGYDgvZPtBJgYCBKXkS9fzmoySgr8CO6Cw==}
+    peerDependencies:
+      '@types/react': npm:types-react@19.0.0-rc.1
+      '@types/react-dom': npm:types-react-dom@19.0.0-rc.1
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+      react-dom: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      '@types/react-dom':
+        optional: true
+
+  '@radix-ui/react-progress@1.1.0':
+    resolution: {integrity: sha512-aSzvnYpP725CROcxAOEBVZZSIQVQdHgBr2QQFKySsaD14u8dNT0batuXI+AAGDdAHfXH8rbnHmjYFqVJ21KkRg==}
     peerDependencies:
       '@types/react': npm:types-react@19.0.0-rc.1
       '@types/react-dom': npm:types-react-dom@19.0.0-rc.1
@@ -2684,6 +2703,10 @@ packages:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
 
+  qs@6.13.1:
+    resolution: {integrity: sha512-EJPeIn0CYrGu+hli1xilKAPXODtJ12T0sP63Ijx2/khC2JtuaN3JyNIpvmnkmaEtha9ocbG4A4cMcr+TvqvwQg==}
+    engines: {node: '>=0.6'}
+
   querystringify@2.2.0:
     resolution: {integrity: sha512-FIqgj2EUvTa7R50u0rGsyTftzjYmv/a3hO345bZNrqabNqjtgiDMgmo4mkUjd+nzU5oF3dClKqFIPUKybUyqoQ==}
 
@@ -2912,6 +2935,10 @@ packages:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
 
+  stripe@17.4.0:
+    resolution: {integrity: sha512-sQQGZguPxe7/QYXJKtDpfzT2OAH9F8nyE2SOsVdTU793iiU33/dpaKgWaJEGJm8396Yy/6NvTLblgdHlueGLhA==}
+    engines: {node: '>=12.*'}
+
   styled-jsx@5.1.6:
     resolution: {integrity: sha512-qSVyDTeMotdvQYoHWLNGwRFJHC+i+ZvdBRYosOFgC+Wg1vx4frN2/RG/NA7SYqqvKNLf39P2LSRA2pu6n0XYZA==}
     engines: {node: '>= 12.0.0'}
@@ -2941,8 +2968,8 @@ packages:
   svix-fetch@3.0.0:
     resolution: {integrity: sha512-rcADxEFhSqHbraZIsjyZNh4TF6V+koloX1OzZ+AQuObX9mZ2LIMhm1buZeuc5BIZPftZpJCMBsSiBaeszo9tRw==}
 
-  svix@1.41.0:
-    resolution: {integrity: sha512-RuRdhM4Kb5ZUwq/VBpsQlH7u0GMgWFr6Tk+21x4uS15pDsGeJjkmOVWQtLcYE8iI332csZ/KX4zJ44pMjJLBQQ==}
+  svix@1.42.0:
+    resolution: {integrity: sha512-y8WOsSoTfUpnJj+1UJ0l0o4Klsqo3m9EheaXHCtDcKeSh3gmbOabrdXDGy+cz046Y59un3ozQTZF3KpKZeosWQ==}
 
   swr@2.2.5:
     resolution: {integrity: sha512-QtxqyclFeAsxEUeZIYmsaQ0UjimSq1RZ9Un7I68/0ClKK/U3LoyQunwkQfJZr2fc22DfIXLNDc2wFyTEikCUpg==}
@@ -3236,7 +3263,7 @@ snapshots:
       - react
       - react-dom
 
-  '@clerk/clerk-react@5.17.0(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)':
+  '@clerk/clerk-react@5.17.1(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)':
     dependencies:
       '@clerk/shared': 2.17.0(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)
       '@clerk/types': 4.35.0
@@ -3244,10 +3271,10 @@ snapshots:
       react-dom: 19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106)
       tslib: 2.4.1
 
-  '@clerk/nextjs@6.5.0(next@15.0.3(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106))(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)':
+  '@clerk/nextjs@6.5.1(next@15.0.3(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106))(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)':
     dependencies:
       '@clerk/backend': 1.18.0(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)
-      '@clerk/clerk-react': 5.17.0(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)
+      '@clerk/clerk-react': 5.17.1(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)
       '@clerk/shared': 2.17.0(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)
       '@clerk/types': 4.35.0
       crypto-js: 4.2.0
@@ -3923,6 +3950,16 @@ snapshots:
   '@radix-ui/react-primitive@2.0.0(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)(types-react-dom@19.0.0-rc.1)(types-react@19.0.0-rc.1)':
     dependencies:
       '@radix-ui/react-slot': 1.1.0(react@19.0.0-rc-66855b96-20241106)(types-react@19.0.0-rc.1)
+      react: 19.0.0-rc-66855b96-20241106
+      react-dom: 19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106)
+    optionalDependencies:
+      '@types/react': types-react@19.0.0-rc.1
+      '@types/react-dom': types-react-dom@19.0.0-rc.1
+
+  '@radix-ui/react-progress@1.1.0(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)(types-react-dom@19.0.0-rc.1)(types-react@19.0.0-rc.1)':
+    dependencies:
+      '@radix-ui/react-context': 1.1.0(react@19.0.0-rc-66855b96-20241106)(types-react@19.0.0-rc.1)
+      '@radix-ui/react-primitive': 2.0.0(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)(types-react-dom@19.0.0-rc.1)(types-react@19.0.0-rc.1)
       react: 19.0.0-rc-66855b96-20241106
       react-dom: 19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106)
     optionalDependencies:
@@ -5530,6 +5567,10 @@ snapshots:
 
   punycode@2.3.1: {}
 
+  qs@6.13.1:
+    dependencies:
+      side-channel: 1.0.6
+
   querystringify@2.2.0: {}
 
   queue-microtask@1.2.3: {}
@@ -5807,6 +5848,11 @@ snapshots:
 
   strip-json-comments@3.1.1: {}
 
+  stripe@17.4.0:
+    dependencies:
+      '@types/node': 20.17.1
+      qs: 6.13.1
+
   styled-jsx@5.1.6(react@19.0.0-rc-66855b96-20241106):
     dependencies:
       client-only: 0.0.1
@@ -5835,7 +5881,7 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  svix@1.41.0:
+  svix@1.42.0:
     dependencies:
       '@stablelib/base64': 1.0.1
       '@types/node': 22.9.0

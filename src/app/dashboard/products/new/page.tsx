@@ -1,6 +1,6 @@
 import { ProductDetailsForm } from '@/app/dashboard/_components/forms/product-details-form';
 import { PageWithBackButton } from '@/app/dashboard/_components/page-with-back-button';
-import { HasPermission } from '@/components/has-permisssion';
+import { HasPermission } from '@/components/has-permission';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { canCreateProduct } from '@/server/permissions';
 
