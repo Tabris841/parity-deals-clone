@@ -10,11 +10,11 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { subscriptionTiers } from '@/data/subscriptionTiers';
+import { subscriptionTiersInOrder } from '@/data/subscription-tiers';
 import { formatCompactNumber } from '@/lib/formatters';
 import { cn } from '@/lib/utils';
 
-type Props = (typeof subscriptionTiers)[number];
+type Props = (typeof subscriptionTiersInOrder)[number];
 
 export function PricingCard({
   name,
